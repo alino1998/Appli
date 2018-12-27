@@ -1,45 +1,61 @@
 import React from "react";
-import { View, Text,TouchableOpacity } from "react-native";
+import {StyleSheet, View, Text,TouchableOpacity } from "react-native";
 
-class AllCountry extends React.Component {
+class Country extends React.Component {
   render() {
     return (
-      <TouchableOpacity>
-          <View>
-
-          </View>
-          <View>
-              
-          </View>
+      <TouchableOpacity style={styles.mainConteneur}>
+         <View style={styles.ImageStyle}>
+          {/* <Image
+            style={{width: 50, height: 50}}
+            source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
+          /> */}
+         </View>
+         <View>
+           <View>
+             <Text>Pays : contry name</Text>
+           </View>
+           <View>
+             <Text>Capital : </Text>
+             <Text>Population :</Text>
+           </View>
+           <View>
+              <Text>superficie : </Text>
+              <Text>Monnaie : </Text>
+           </View>
+         </View>
       </TouchableOpacity>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
-    AllCountryStyle: {
-      backgroundColor: '#56FF40',
+    mainConteneur : {
+      height: 150,
+      margin:10,
+      display:'flex',
+      flexDirection: 'row',
     },
-    SearchCountrystyle: {
-      backgroundColor: '#E8AA0C',
+    ImageStyle:{
+      flex : 1,
+      backgroundColor:'red',
     },
-    textStyle:{
-      fontSize:35,
-      color:'#200CE8'
+    contBloc2Style :{
+      flex:3,
+      display : 'flex',
+      flexDirection : 'column'
     },
-    mainContenair :{
-      flex:1,
-      justifyContent:'space-around',
-      alignItems:'center'
+    contPays :{
+      flex : 1,
+      backgroundColor : 'red'
     },
-    boxStyle:{
-      width:300,
-      height:150,
-      borderColor:'black',
-      borderRadius:10,
-      borderWidth:3,
-      justifyContent:'center',
-      alignItems:'center',
+    contcapitalPopulation :{
+      flex : 1,
+      backgroundColor : 'black'
+    },
+    contSuperficieMonnaie :{
+      flex : 1,
+      backgroundColor : 'green'
     }
   });
-export default AllCountry;
+export default Country;

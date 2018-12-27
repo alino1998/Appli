@@ -1,15 +1,16 @@
 import React from "react";
 import { View, Text } from "react-native";
+import Country from "./Country";
 
-class Country extends React.Component {
+class AllCountry extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Home Screen</Text>
+        <Country />
       </View>
     );
   }
 }
 
 
-export default Country;
+export default AllCountry;
